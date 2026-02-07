@@ -1,48 +1,4 @@
-// import React, { useEffect, useRef } from 'react'
-// import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt';
-// import { useParams } from 'react-router-dom'
-// useRef
-// const Room = () => {
-//     const {id} = useParams();
-//     const meetingRef = useRef(null);
-// useEffect(()=>{
-// if(meetingRef.current){
-//     const meeting=(element)=>{
-//          const appID = 1678291218;
-//       const serverSecret = "304f0204be3fdd9c98a49b1e55f228e9";
-//       const kitToken =  ZegoUIKitPrebuilt.generateKitTokenForTest
-//       (appID, serverSecret, id, Date.now().toString(),"vivek saini");
 
-
-//      // Create instance object from Kit Token.
-//       const zp = ZegoUIKitPrebuilt.create(kitToken);
-//        zp.joinRoom({
-//         container: element,
-//         sharedLinks: [
-//           {
-//             name: 'Personal link',
-//             url: `http://localhost:5173/room/${id}`,
-           
-//           },
-//         ],
-//         scenario: {
-//           mode: ZegoUIKitPrebuilt.OneONoneCall, // To implement 1-on-1 calls, modify the parameter here to [ZegoUIKitPrebuilt.OneONoneCall].
-//         },
-//       });
-//     }
-//     meeting(meetingRef.current)
-// }
-
-// },[])
-    
-//   return (
-//     <div>Room
-//         <div ref={meetingRef}> </div>
-//     </div>
-//   )
-// }
-
-// export default Room
 
 import React, { useRef } from "react";
 import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
@@ -59,8 +15,8 @@ const Room = () => {
 
     joinedRef.current = true;
 
-    const appID = 1678291218;
-    const serverSecret = "304f0204be3fdd9c98a49b1e55f228e9";
+    const appID = 1631062563;
+    const serverSecret = "6cf4438d6a2282d25d5766a25626d328";
 
     const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(
       appID,
